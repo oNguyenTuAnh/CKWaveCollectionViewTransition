@@ -10,7 +10,7 @@ import UIKit
 
 extension UIApplication {
     
-    static func statusBarHeight() -> CGFloat {
+    public static func statusBarHeight() -> CGFloat {
         
         let kStatusBarHeight: CGFloat = UIApplication.shared.statusBarFrame.height
         let statusBarVisible = !UIApplication.shared.isStatusBarHidden

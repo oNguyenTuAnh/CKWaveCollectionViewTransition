@@ -10,7 +10,7 @@ import UIKit
 
 extension UICollectionView {
     
-    func numberOfVisibleRowsAndColumn() -> (rows: Int, columns: Int) {
+    public func numberOfVisibleRowsAndColumn() -> (rows: Int, columns: Int) {
         
         var rows = 1
         var columns = 0

@@ -10,11 +10,11 @@
 
 import UIKit
 
-class CKWaveCollectionViewAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
+public class CKWaveCollectionViewAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
-    internal var reversed: Bool = false
+    public var reversed: Bool = false
     
-    internal var animationDuration: Double! = 1.0
+    public var animationDuration: Double! = 1.0
     internal let kCellAnimSmallDelta: Double! = 0.01
     internal let kCellAnimBigDelta: Double! = 0.03
     
@@ -23,11 +23,11 @@ class CKWaveCollectionViewAnimator: NSObject, UIViewControllerAnimatedTransition
     fileprivate let kDeltaBetweenCellLayers: Int! = 2
     
     //MARK :- UIViewControllerAnimatedTransitioning
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return animationDuration
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         var destinationCollectionViewController: UICollectionViewController!
         var sourceCollectionViewController: UICollectionViewController!
@@ -304,11 +304,11 @@ class CKWaveCollectionViewAnimator: NSObject, UIViewControllerAnimatedTransition
     }
     
     //MARK :- UIViewControllerTransitioningDelegate
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
     }
     
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
     }
 }

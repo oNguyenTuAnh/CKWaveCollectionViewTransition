@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func navigationBarHeight() -> CGFloat {
+    public func navigationBarHeight() -> CGFloat {
         
         let kNavigationBarHeight: CGFloat = 44.0
         
